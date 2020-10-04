@@ -1,7 +1,9 @@
 @import "bootstrap";
+@import "bootstrap-sprockets";
 
 $gray-medium-light: #eaeaea;
 $gray-medium: #ababab;
+$dark-gray: #2c2c2c;
 
 @mixin box_sizing {
   -moz-box-sizing:    border-box;
@@ -12,19 +14,8 @@ $gray-medium: #ababab;
 /* MAIN */
 
 .container {
-  margin-left: 135px
-}
-
-h1, h2, h3, h4, h5, h6 {
-  line-height: 1;
-}
-
-.quiet {
-  color: $gray-medium;
-}
-
-body {
-  padding-top: 60px;
+  margin-left: 135px;
+  padding: 5px 15px;
 }
 
 section {
@@ -42,17 +33,21 @@ textarea {
   }
 }
 
-div.comment_votes {
-  padding: 10px;
+.badge {
+  margin-right: 4px;
 }
 
-.field_with_errors label {
-  color: #dc3545;
-}
-
-.field_with_errors input,
-.field_with_errors textarea {
-  border-color: #dc3545;
+div {
+  .comment_votes {
+    padding: 10px;
+  }
+  .nav_item {
+    margin-left: 25px;
+    float: left;
+  }
+  .well {
+    margin: 5px;
+  }
 }
 
 /* typography */
@@ -81,6 +76,10 @@ p {
   line-height: 1.7em;
 }
 
+.quiet {
+  color: $gray-medium;
+}
+
 /* header */
 #logo {
   float: left;
@@ -89,21 +88,27 @@ p {
   color: $gray-medium-light;
   text-transform: uppercase;
   letter-spacing: -1px;
-  padding-top: 9px;
   font-weight: bold;
   &:hover {
-    color: $gray-medium-light;
-    text-decoration: none;
+    color: white;
+    background-color: $dark-gray;
   }
 }
 
-.navbar .nav > li > a.brand {
-  padding-left: 0px;
+.navbar {
+  background-color: $dark-gray;
+  .nav > li > a.brand {
+    padding-left: 0px;
+  }
 }
 
-div.nav_item {
-  margin-left: 25px;
-  float: left;
+.nav_item {
+  a {
+    color: $gray-medium-light;
+    &:hover {
+      color: #337ab7;
+    }
+  }
 }
 
 /* forms */
