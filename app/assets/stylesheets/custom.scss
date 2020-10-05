@@ -48,6 +48,14 @@ div {
   .well {
     margin: 5px;
   }
+  .text-center {
+    padding: 5px;
+    a {
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
 }
 
 /* typography */
@@ -74,6 +82,10 @@ h2 {
 p {
   font-size: 1.1em;
   line-height: 1.7em;
+}
+
+i {
+  font-size: 30px;
 }
 
 .quiet {

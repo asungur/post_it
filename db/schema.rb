@@ -52,11 +52,11 @@ ActiveRecord::Schema.define(version: 2020_10_01_131707) do
   create_table "votes", force: :cascade do |t|
     t.boolean "vote"
     t.integer "user_id"
-    t.string "votable_type"
-    t.integer "votable_id"
+    t.string "voteable_type"
+    t.integer "voteable_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["votable_type", "votable_id"], name: "index_votes_on_votable_type_and_votable_id"
+    t.index ["voteable_type", "voteable_id"], name: "index_votes_on_voteable_type_and_voteable_id"
   end
 
 end

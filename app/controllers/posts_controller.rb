@@ -38,15 +38,14 @@ class PostsController < ApplicationController
   end
 
   def vote
-    vote = Vote.create(voteable: @post, creator: current_user, vote: params[:vote])
-
-    if vote.valid?
+    if new_vote?
+      vote = Vote.create(voteable: @post, creator: current_user, vote: params[:vote])
       flash[:success] = "Your vote was counted."
     else
       flash[:error] = "You can only vote on a post once."
     end
 
-    redirect_to :back
+    redirect_to root_url
   end
 
 
@@ -58,5 +57,10 @@ class PostsController < ApplicationController
 
   def set_post
     @post = Post.find(params[:id])
+  end
+
+  def new_vote?
+    votes = Vote.where(creator: current_user, voteable: @post)
+    votes.empty?
   end
 end
