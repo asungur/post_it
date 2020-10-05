@@ -58,6 +58,11 @@ div {
   }
 }
 
+.btn-light {
+  background-color: $gray-medium-light;
+  border-color: $gray-medium-light;
+}
+
 /* typography */
 h1, h2, h3, h4, h5, h6 {
   line-height: 1;
@@ -88,6 +93,10 @@ i {
   font-size: 30px;
 }
 
+a {
+  color: black;
+}
+
 .quiet {
   color: $gray-medium;
 }
@@ -116,7 +125,9 @@ i {
 
 .nav_item {
   a {
-    color: $gray-medium-light;
+    .btn-info {
+      color: $gray-medium-light;
+    }
     &:hover {
       color: #337ab7;
     }
