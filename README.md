@@ -1,6 +1,6 @@
 <h1> Post_it </h1>
 
-![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/0425e186-0e35-4c9d-9365-226c665c8ee8/post_it_demo_long.gif](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/0425e186-0e35-4c9d-9365-226c665c8ee8/post_it_demo_long.gif)
+![Post-it demo](/app/assets/post_it_demo_long.gif)
 
 **Post-it** is a toy Reddit application. It allows users to submit posts in different categories and interact with other users using comments and voting features. It was built using Rails 6 and Bootstrap 3.
 
